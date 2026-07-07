@@ -2,36 +2,48 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>التحقق من الشهادات</title>
+    <title>التحقق من الشهادة</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f4f4f4; font-family: Arial, sans-serif;">
+<body style="text-align: center; padding: 50px; font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
-    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px;">
-        <h2>التحقق من الشهادة</h2>
-        <p>أدخل رقم الشهادة المكون من 12 خانة للتحقق من صحتها</p>
+    <div style="max-width: 500px; margin: auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="color: #001f3f;">نظام التحقق من الشهادات</h2>
+        <input type="text" id="certID" placeholder="أدخل رقم الشهادة (مثل PTC-2026-001)" style="width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+        <button onclick="checkCert()" style="width: 100%; padding: 12px; background: #001f3f; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">تحقق الآن</button>
         
-        <input type="text" id="certInput" placeholder="PTC-XXXX-XXXX" style="width: 100%; padding: 12p
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>Verify Certificate</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body style="text-align: center; padding: 50px;">
-    <h1>Certificate Verification</h1>
-    <input type="text" id="certID" placeholder="Enter ID" style="padding: 10px;">
-    <button onclick="check()" style="padding: 10px;">Verify</button>
-    <p id="res"></p>
+        <div id="details" style="margin-top: 25px; text-align: right; border-top: 1px solid #eee; padding-top: 15px;"></div>
+    </div>
 
     <script>
-        function check() {
+        function checkCert() {
             let id = document.getElementById('certID').value;
-            if(id === "123") { document.getElementById('res').innerHTML = "Valid Certificate!"; }
-            else { document.getElementById('res').innerHTML = "Invalid ID."; }
+            let details = document.getElementById('details');
+            
+            // قاعدة البيانات (هنا بتضيف الشهادات الجديدة)
+            let database = {
+                "PTC-2026-001": { 
+                    name: "Bashar Mohammed Ali Mohammed", 
+                    course: "هندسة الذكاء الإصطناعي و الأمن السيبراني", 
+                    trainer: "المهندس مالك عبد الباقي محمد", 
+                    date: "2026/يوليو/5", 
+                    status: "✅ تم الإعتماد" 
+                }
+            };
+
+            if(database[id]) {
+                let cert = database[id];
+                details.innerHTML = `
+                    <p><b>الاسم:</b> ${cert.name}</p>
+                    <p><b>الدورة:</b> ${cert.course}</p>
+                    <p><b>المدرب:</b> ${cert.trainer}</p>
+                    <p><b>التاريخ:</b> ${cert.date}</p>
+                    <p><b>الحالة:</b> ${cert.status}</p>
+                `;
+            } else {
+                details.innerHTML = "<p style='color:red; font-weight:bold;'>❌ الشهادة غير موجودة أو الرقم خاطئ</p>";
+            }
         }
     </script>
 </body>
 </html>
-
