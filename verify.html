@@ -11,25 +11,27 @@
         <h2>التحقق من الشهادة</h2>
         <p>أدخل رقم الشهادة المكون من 12 خانة للتحقق من صحتها</p>
         
-        <input type="text" id="certInput" placeholder="PTC-XXXX-XXXX" style="width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
-        
-        <button onclick="verify()" style="width: 100%; padding: 12px; background: #001f3f; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">تحقق الآن</button>
-        
-        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
-    </div>
+        <input type="text" id="certInput" placeholder="PTC-XXXX-XXXX" style="width: 100%; padding: 12p
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Certificate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="text-align: center; padding: 50px;">
+    <h1>Certificate Verification</h1>
+    <input type="text" id="certID" placeholder="Enter ID" style="padding: 10px;">
+    <button onclick="check()" style="padding: 10px;">Verify</button>
+    <p id="res"></p>
 
     <script>
-        function verify() {
-            var val = document.getElementById('certInput').value;
-            var res = document.getElementById('result');
-            if(val === "PTC-2026-0001") {
-                res.innerHTML = "✅ الشهادة صالحة وموثقة باسم: بشار محمد";
-                res.style.color = "green";
-            } else {
-                res.innerHTML = "❌ رقم الشهادة غير موجود أو غير صحيح.";
-                res.style.color = "red";
-            }
+        function check() {
+            let id = document.getElementById('certID').value;
+            if(id === "123") { document.getElementById('res').innerHTML = "Valid Certificate!"; }
+            else { document.getElementById('res').innerHTML = "Invalid ID."; }
         }
     </script>
 </body>
 </html>
+
