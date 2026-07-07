@@ -1,154 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Tahoma", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Training Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    background: #f5f7fb;
-    color: #222;
-}
+<header>
+    <div class="logo">
+        <h2>🔥 Phoenix Training Center</h2>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="verify.html">Verify Certificate</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
+<section class="hero">
+    <div class="hero-content">
+        <h1>Phoenix Training Center</h1>
+        <p>Professional digital training for your future career.</p>
+        <a href="verify.html" class="btn">Verify Certificate</a>
+    </div>
+</section>
 
-/* Header */
+<script>
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+</script>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: white;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-}
+</body>
+</html>
 
-.logo h2 {
-    color: #0b3d91;
-}
-
-.logo span {
-    font-size: 14px;
-    color: #777;
-}
-
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #0b3d91;
-}
-
-
-#lang-btn {
-    padding: 10px 20px;
-    border: none;
-    background: #0b3d91;
-    color: white;
-    border-radius: 20px;
-}
-
-
-/* Hero */
-
-.hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
-
-    background-size: cover;
-    background-position: center;
-}
-
-
-.hero-content {
-    color: white;
-    max-width: 700px;
-}
-
-
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-
-.hero h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-
-.hero p {
-    font-size: 20px;
-    line-height: 1.8;
-}
-
-
-.btn {
-    display: inline-block;
-    margin: 25px 10px;
-    padding: 14px 30px;
-    background: #0b3d91;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-}
-
-
-.second {
-    background: #f39c12;
-}
-
-
-/* About */
-
-.about {
-    padding: 60px 10%;
-    text-align: center;
-}
-
-
-.about h2 {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-
-.about p {
-    font-size: 18px;
-}
-
-
-/* Footer */
-
-footer {
-    background: #0b3d91;
-    color:white;
-    text-align:center;
-    padding:20px;
-/* تحسين القائمة للموبايل */
-@media (max-width: 600px) {
-    header { flex-direction: column; text-align: center; }
-    nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
-    .logo { margin-bottom: 10px; }
-    #lang-btn { margin-top: 10px; }
-}
