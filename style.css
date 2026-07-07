@@ -145,7 +145,7 @@ footer {
     color:white;
     text-align:center;
     padding:20px;
-}
+
 @media (max-width: 600px) {
     header { flex-direction: column; text-align: center; }
     nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
