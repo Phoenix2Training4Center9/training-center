@@ -1,19 +1,38 @@
-body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+/* تنسيق عام */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
 
+/* الهيدر الأنيق */
 header { 
     display: flex; justify-content: space-between; align-items: center; 
-    padding: 20px; background: #001f3f; color: white; 
+    padding: 15px 5%; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: white; text-decoration: none; }
+.logo { font-weight: bold; font-size: 1.2rem; color: #001f3f; }
 
+nav ul { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; }
+nav a { color: #333; text-decoration: none; font-size: 0.9rem; }
+
+/* قسم الهيرو (الترحيب) العصري */
 .hero { 
-    text-align: center; padding: 100px 20px; 
-    background: linear-gradient(to bottom, #001f3f, #0074D9); color: white; 
+    text-align: center; padding: 60px 20px; 
+    background: #001f3f; color: white; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
 }
 
+.hero h1 { font-size: 1.8rem; margin-bottom: 10px; }
+.hero p { font-size: 1rem; color: #ccc; margin-bottom: 25px; }
+
+/* الزر الاحترافي */
 .btn { 
-    display: inline-block; padding: 15px 30px; margin-top: 20px; 
-    background: #FFDC00; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; 
+    display: inline-block; padding: 12px 25px; 
+    background: #FFDC00; color: #000; text-decoration: none; 
+    font-weight: bold; border-radius: 25px; transition: 0.3s;
 }
+
+.btn:hover { background: #ffd700; transform: scale(1.05); }
+
+/* تنسيق الموبايل (عشان ما يتبهدل) */
+@media (max-width: 600px) {
+    header { flex-direction: column; gap: 10px; }
+    nav ul { gap: 10px; }
+}
+
