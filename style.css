@@ -1,0 +1,19 @@
+body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+
+header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px; background: #001f3f; color: white; 
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; }
+
+.hero { 
+    text-align: center; padding: 100px 20px; 
+    background: linear-gradient(to bottom, #001f3f, #0074D9); color: white; 
+}
+
+.btn { 
+    display: inline-block; padding: 15px 30px; margin-top: 20px; 
+    background: #FFDC00; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; 
+}
