@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>التحقق من الشهادة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f4;">
+
+    <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px;">
+        <h2>التحقق من الشهادة</h2>
+        <input type="text" id="certID" placeholder="أدخل رقم الشهادة هنا" style="width: 100%; padding: 10px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px;">
+        <button onclick="checkCert()" style="background: #001f3f; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">تحقق</button>
+        <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        function checkCert() {
+            let id = document.getElementById('certID').value;
+            let result = document.getElementById('result');
+            
+            // هنا بنضيف أرقام الشهادات الحقيقية لما نجهزها
+            if(id === "PTC-2026-0001") {
+                result.innerHTML = "✅ الشهادة صحيحة وموثقة باسم: بشار محمد";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "❌ الشهادة غير موجودة أو غير صالحة.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
