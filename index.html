@@ -1,36 +1,86 @@
-body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-/* الهيدر (القائمة العلوية) */
-header { 
-    display: flex; justify-content: space-between; align-items: center; 
-    padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز فينيكس للتدريب | Phoenix Training Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.logo h2 { margin: 0; font-size: 1.2rem; color: #001f3f; }
-.logo span { font-size: 0.8rem; color: #666; }
+<body>
 
-nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
-nav a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; }
+<header>
+    <div class="logo">
+        <h2>🔥 مركز فينيكس للتدريب</h2>
+        <span>Phoenix Training Center</span>
+    </div>
 
-/* قسم الهيرو (الصورة والنصوص) */
-.hero { 
-    position: relative; height: 500px; display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('https://via.placeholder.com/1500x500'); 
-    background-size: cover; color: white; text-align: center;
-}
+    <nav>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">عن المركز</a></li>
+            <li><a href="#">الدورات</a></li>
+         <li><a href="verify.html" class="nav-btn">التحقق من الشهادات</a></li>
 
-.hero-content h1 { font-size: 2.5rem; margin-bottom: 5px; }
-.hero-content p { font-size: 1.1rem; max-width: 600px; margin: 15px auto; }
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+    </nav>
 
-/* الأزرار */
-.btn { display: inline-block; padding: 12px 30px; margin: 10px; border-radius: 30px; text-decoration: none; font-weight: bold; }
-.btn:first-child { background: #0074D9; color: white; } /* استكشف الدورات */
-.btn.second { background: #FFDC00; color: #000; } /* تحقق من الشهادة */
+    <button id="lang-btn">English</button>
+</header>
 
-/* التجاوب مع الموبايل */
-@media (max-width: 600px) {
-    header { flex-direction: column; text-align: center; }
-    nav ul { margin-top: 15px; }
-    .hero { height: 400px; }
-    .hero-content h1 { font-size: 1.8rem; }
-}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            مركز فينيكس للتدريب
+        </h1>
+
+        <h2>
+            Phoenix Training Center
+        </h2>
+
+        <p>
+            منصة تدريبية احترافية تهدف إلى تطوير المهارات الرقمية
+            وإعداد جيل قادر على المنافسة في سوق العمل.
+        </p>
+
+        <div>
+            <a href="#" class="btn">
+                استكشف الدورات
+            </a>
+
+            <a href="#" class="btn second">
+                تحقق من الشهادة
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about">
+
+<h2>لماذا مركز فينيكس؟</h2>
+
+<p>
+نقدم برامج تدريبية متخصصة بإشراف مدربين مؤهلين،
+مع شهادات يمكن التحقق منها إلكترونياً.
+</p>
+
+</section>
+
+
+<footer>
+<p>
+© 2026 Phoenix Training Center
+</p>
+</footer>
+
+
+</body>
+</html>
