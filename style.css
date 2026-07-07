@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>التحقق من الشهادة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="text-align: center; padding: 50px; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+
+    <div style="max-width: 500px; margin: auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="color: #001f3f;">التحقق من الشهادة</h2>
+        <p>أدخل رقم الشهادة (12 خانة)</p>
+        <input type="text" id="certID" placeholder="000000000000" style="width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+        <button onclick="checkCert()" style="width: 100%; padding: 12px; background: #001f3f; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">تحقق الآن</button>
+        
+        <div id="details" style="margin-top: 25px; text-align: right; border-top: 1px solid #eee; padding-top: 15px;"></div>
+    </div>
+
+    <script>
+        function checkCert() {
+            let id = document.getElementById('certID').value;
+            let details = document.getElementById('details');
+            
+            let database = {
+                "202607050001": { 
+                    name: "Bashar Mohammed Ali Mohammed", 
+                    course: "هندسة الذكاء الإصطناعي و الأمن السيبراني", 
+                    trainer: "المهندس مالك عبد الباقي محمد", 
+                    date: "2026/يوليو/5", 
+                    status: "✅ تم الإعتماد" 
+                }
+            };
+
+            if(database[id]) {
+                let cert = database[id];
+                details.innerHTML = `
+                    <p><b>الاسم:</b> ${cert.name}</p>
+                    <p><b>الدورة:</b> ${cert.course}</p>
+                    <p><b>المدرب:</b> ${cert.trainer}</p>
+                    <p><b>التاريخ:</b> ${cert.date}</p>
+                    <p><b>الحالة:</b> ${cert.status}</p>
+                `;
+            } else {
+                details.innerHTML = "<p style='color:red; font-weight:bold;'>❌ الشهادة غير موجودة</p>";
+            }
+        }
+    </script>
+</body>
+</html>
 
