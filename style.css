@@ -1,36 +1,39 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>التحقق من الشهادة</title>
-</head>
-<body style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+body{
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:#f5f7fb;
+}
 
-    <div id="result-box">
-        <h2>التحقق من الشهادة</h2>
-        <input type="text" id="certID" placeholder="أدخل رقم الشهادة">
-        <button onclick="checkCert()">تحقق</button>
-        <div id="details" style="margin-top: 20px;"></div>
-    </div>
+header{
+    background:#0B3C5D;
+    color:white;
+    padding:15px;
+}
 
-    <script>
-        function checkCert() {
-            const urlParams = new URLSearchParams(window.location.search);
-            let id = document.getElementById('certID').value || urlParams.get('id');
-            let details = document.getElementById('details');
-            
-            let database = {
-                "202607050001": { name: "Bashar Mohammed Ali Mohammed", course: "هندسة الذكاء الإصطناعي و الأمن السيبراني", trainer: "المهندس مالك عبد الباقي محمد", date: "2026/يوليو/5", status: "✅ تم الإعتماد" }
-            };
+.btn{
+    background:#FFD700;
+    color:black;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+}
 
-            if(database[id]) {
-                let cert = database[id];
-                details.innerHTML = `<p><b>الاسم:</b> ${cert.name}</p><p><b>الدورة:</b> ${cert.course}</p><p><b>المدرب:</b> ${cert.trainer}</p><p><b>التاريخ:</b> ${cert.date}</p><p><b>الحالة:</b> ${cert.status}</p>`;
-            } else if(id) {
-                details.innerHTML = "<p style='color:red;'>❌ الشهادة غير موجودة</p>";
-            }
-        }
-        window.onload = checkCert;
-    </script>
-</body>
-</html>
+.btn:hover{
+    background:#ffcc00;
+}
+
+input{
+    padding:12px;
+    width:300px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px 25px;
+    background:#0B3C5D;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
