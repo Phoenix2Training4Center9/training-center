@@ -1,86 +1,190 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مركز فينيكس للتدريب | Phoenix Training Center</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        <h2>🔥 مركز فينيكس للتدريب</h2>
-        <span>Phoenix Training Center</span>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="Phoenix Logo">
+
+            <div>
+                <h2>مركز فينيكس للتدريب</h2>
+                <span>Phoenix Training Center</span>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">الرئيسية</a></li>
+
+                <li><a href="#about">عن المركز</a></li>
+
+                <li><a href="#courses">الدورات</a></li>
+
+                <li><a href="verify.html">التحقق من الشهادات</a></li>
+
+                <li><a href="#contact">اتصل بنا</a></li>
+
+            </ul>
+
+        </nav>
+
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">عن المركز</a></li>
-            <li><a href="#">الدورات</a></li>
-         <a href="verify.html" class="btn second">تحقق من الشهادة</a>
-
-            <li><a href="#">تواصل معنا</a></li>
-        </ul>
-    </nav>
-
-    <button id="lang-btn">English</button>
 </header>
 
+<section class="hero" id="home">
 
-<section class="hero">
+    <div class="overlay">
 
-    <div class="hero-content">
+        <h1>مركز فينيكس للتدريب</h1>
 
-        <h1>
-            مركز فينيكس للتدريب
-        </h1>
-
-        <h2>
-            Phoenix Training Center
-        </h2>
+        <h2>Phoenix Training Center</h2>
 
         <p>
-            منصة تدريبية احترافية تهدف إلى تطوير المهارات الرقمية
-            وإعداد جيل قادر على المنافسة في سوق العمل.
+
+            نؤمن بأن التدريب هو الطريق إلى النجاح.
+
+            نقدم برامج احترافية وشهادات يمكن التحقق منها إلكترونياً باستخدام QR Code.
+
         </p>
 
-        <div>
-            <a href="#" class="btn">
+        <div class="buttons">
+
+            <a href="#courses" class="btn">
+
                 استكشف الدورات
+
             </a>
 
-            <a href="#" class="btn second">
+            <a href="verify.html" class="btn second">
+
                 تحقق من الشهادة
+
             </a>
+
         </div>
 
     </div>
 
 </section>
 
+<section id="about" class="section">
 
-<section class="about">
+    <div class="container">
 
-<h2>لماذا مركز فينيكس؟</h2>
+        <h2>من نحن</h2>
 
-<p>
-نقدم برامج تدريبية متخصصة بإشراف مدربين مؤهلين،
-مع شهادات يمكن التحقق منها إلكترونياً.
-</p>
+        <p>
+
+            مركز فينيكس للتدريب مؤسسة تعليمية تهدف إلى تطوير المهارات التقنية والمهنية
+            من خلال دورات حديثة يقدمها مدربون متخصصون.
+
+        </p>
+
+    </div>
 
 </section>
 
+<section id="courses" class="section gray">
+
+    <div class="container">
+
+        <h2>أشهر الدورات</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>الذكاء الاصطناعي</h3>
+                <p>تعلم أساسيات وتقنيات الذكاء الاصطناعي الحديثة.</p>
+            </div>
+
+            <div class="card">
+                <h3>تصميم المواقع</h3>
+                <p>HTML - CSS - JavaScript</p>
+            </div>
+
+            <div class="card">
+                <h3>برمجة Python</h3>
+                <p>من الصفر حتى الاحتراف.</p>
+            </div>
+
+            <div class="card">
+                <h3>الأمن السيبراني</h3>
+                <p>تعرف على أساسيات حماية الأنظمة والشبكات.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="verify">
+
+    <h2>التحقق من الشهادات</h2>
+
+    <p>
+
+        يمكنك التأكد من صحة أي شهادة صادرة من مركز فينيكس للتدريب.
+
+    </p>
+
+    <a href="verify.html" class="btn">
+
+        Verify Certificate
+
+    </a>
+
+</section>
+
+<section id="contact" class="section">
+
+    <div class="container">
+
+        <h2>تواصل معنا</h2>
+
+        <p>البريد الإلكتروني: info@phoenixtraining.com</p>
+
+        <p>الهاتف: +249 XXX XXX XXX</p>
+
+    </div>
+
+</section>
 
 <footer>
-<p>
-© 2026 Phoenix Training Center
-</p>
+
+    <p>
+
+        © 2026 Phoenix Training Center
+
+        <br>
+
+        جميع الحقوق محفوظة.
+
+    </p>
+
 </footer>
 
+<script src="script.js"></script>
 
 </body>
 </html>
