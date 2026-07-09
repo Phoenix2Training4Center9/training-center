@@ -332,3 +332,43 @@ nav ul{
 }
 
 }
+header{
+    background:#0B3C5D;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.logo h2{
+    margin:0;
+    font-size:22px;
+}
+
+.logo span{
+    color:#FFD700;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+}
