@@ -297,3 +297,38 @@ nav ul li a{
 nav ul li a:hover{
     color:#FFD700;
 }
+.menu-btn{
+    display:none;
+    background:#FFD700;
+    color:#0B3C5D;
+    border:none;
+    padding:10px 15px;
+    font-size:24px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.menu-btn{
+    display:block;
+    margin:15px auto;
+}
+
+nav{
+    display:none;
+}
+
+nav.show{
+    display:block;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+    padding:20px 0;
+}
+
+}
