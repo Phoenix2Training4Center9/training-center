@@ -322,3 +322,51 @@ footer{
         padding:0;
     }
 }
+.theme-btn{
+    background:#FFD700;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    margin:5px;
+}
+
+body.dark{
+    background:#121212;
+    color:#ffffff;
+}
+
+body.dark header{
+    background:#1f1f1f;
+}
+
+body.dark .card{
+    background:#222;
+    color:#fff;
+}
+
+body.dark .section{
+    background:#181818;
+}
+
+body.dark .gray{
+    background:#202020;
+}
+
+body.dark footer{
+    background:#111;
+}
+
+body.dark .btn{
+    background:#FFD700;
+    color:#000;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark a{
+    color:#fff;
+}
