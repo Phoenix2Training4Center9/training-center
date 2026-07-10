@@ -395,3 +395,32 @@ body.dark p,
 body.dark a{
     color:#fff;
 }
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero h1{
+animation:fadeUp 1s;
+}
+
+.hero h2{
+animation:fadeUp 1.3s;
+}
+
+.hero p{
+animation:fadeUp 1.6s;
+}
+
+.buttons{
+animation:fadeUp 2s;
+}
