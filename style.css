@@ -284,6 +284,20 @@ footer{
 /* ===== Sidebar Menu ===== */
 
 .sidebar{
+    .sidebar a,
+.sidebar a:visited{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    padding:18px 25px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.sidebar a:hover{
+    background:#FFD700;
+    color:#0B2A55;
+}
     position:fixed;
     top:0;
     right:-280px;
