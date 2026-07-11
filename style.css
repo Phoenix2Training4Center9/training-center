@@ -424,3 +424,7 @@ animation:fadeUp 1.6s;
 .buttons{
 animation:fadeUp 2s;
 }
+.menu-btn,
+.theme-btn{
+    margin:5px;
+}
